@@ -1,7 +1,9 @@
 package com.example.madventure
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import com.example.madventure.databinding.ActivityMainBinding
 
 class MainActivity : Activity() {
@@ -14,5 +16,10 @@ class MainActivity : Activity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+    }
+
+    fun clickNextActivity(view: View) {
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
     }
 }
